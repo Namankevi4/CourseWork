@@ -1,4 +1,4 @@
-Hello-World
+CourseWork
 ===========
 
 My first repository
