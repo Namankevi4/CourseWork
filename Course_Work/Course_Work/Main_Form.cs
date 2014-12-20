@@ -86,14 +86,7 @@ namespace Course_Work
         }
         private void Tbsearch_TextChanged(object sender, EventArgs e)
         {
-            string value = Tbsearch.Text.Trim();
-            dataGridView1.CurrentCell = null;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                if (dataGridView1.Rows[i].Cells[comboBoxChoise.Text].Value.ToString().ToLower().Contains(value) || Tbsearch.Text.Length == 0)
-                { dataGridView1.Rows[i].Visible = true; }
-                else dataGridView1.Rows[i].Visible = false;
-            }
+            functions_of_cataloger.search(dataGridView1, comboBoxChoise, Tbsearch);
         }
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
         {

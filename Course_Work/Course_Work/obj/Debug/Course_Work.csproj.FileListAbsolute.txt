@@ -9,3 +9,14 @@ c:\users\alex\documents\visual studio 2012\Projects\Course_Work\Course_Work\obj\
 C:\Users\alex\documents\visual studio 2012\Projects\Course_Work\Course_Work\obj\Debug\Course_Work.Change_Form.resources
 C:\Users\alex\documents\visual studio 2012\Projects\Course_Work\Course_Work\obj\Debug\Course_Work.Main_Form.resources
 C:\Users\alex\documents\visual studio 2012\Projects\Course_Work\Course_Work\obj\Debug\Course_Work.photo.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe.config
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.exe
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.pdb
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.pdb
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.csprojResolveAssemblyReference.cache
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Change_Form.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Main_Form.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.photo.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Properties.Resources.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.csproj.GenerateResource.Cache

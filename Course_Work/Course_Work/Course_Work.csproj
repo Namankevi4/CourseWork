@@ -51,6 +51,7 @@
     <Compile Include="Change_Form.Designer.cs">
       <DependentUpon>Change_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="functions_of cataloger.cs" />
     <Compile Include="photo.cs">
       <SubType>Form</SubType>
     </Compile>
