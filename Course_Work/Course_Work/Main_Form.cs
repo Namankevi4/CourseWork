@@ -23,19 +23,10 @@ namespace Course_Work
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                FileStream stream = new FileStream(openFileDialog1.FileName, FileMode.Open);
-                XmlSerializer serializer = new XmlSerializer(typeof(SortableBindingList<Film>));
-                Program.film.catalog = serializer.Deserialize(stream) as SortableBindingList<Film>;
-                stream.Close();
-                foreach (Film f in Program.film.catalog)
-                {
-                    try
-                    {
-                        f.Photo = Image.FromFile(@"Image\" + f.title + ".jpeg");
-                    }
-                    catch { };
-                }
+                Program.film.catalog = functions_of_cataloger.open(openFileDialog1);
+                
                 dataGridView1.DataSource = Program.film.catalog;
+                
             }
         }
         private void Main_Form_Load(object sender, EventArgs e)
@@ -90,30 +81,22 @@ namespace Course_Work
         }
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Save?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                
-            }       
+                var result = MessageBox.Show("Save?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (this.saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        functions_of_cataloger.save(saveFileDialog1, Program.film.catalog);
+                    }
+                }
+            
         }
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+             
             if (this.saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                FileStream stream = new FileStream(this.saveFileDialog1.FileName, FileMode.Create);
-                XmlSerializer serializer = new XmlSerializer(typeof(SortableBindingList<Film>));//ошибка
-                serializer.Serialize(stream, Program.film.catalog);
-                stream.Close();
-
-                if (Directory.Exists("Image"))
-                {
-                    Directory.Delete("Image", true);
-                }
-                Directory.CreateDirectory("Image");
-
-                foreach (Film obj in Program.film.catalog)
-                {
-                    obj.Photo.Save(@"Image\" + obj.title + ".jpeg", ImageFormat.Jpeg);
-                }
+                functions_of_cataloger.save(saveFileDialog1, Program.film.catalog);
             }
         }
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
