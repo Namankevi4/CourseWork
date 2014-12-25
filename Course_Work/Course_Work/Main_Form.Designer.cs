@@ -28,47 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Main_Grid = new System.Windows.Forms.DataGridView();
             this.Change = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Add = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.rtb_Description = new System.Windows.Forms.RichTextBox();
+            this.ll_Description = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.comboBoxChoise = new System.Windows.Forms.ComboBox();
             this.Tbsearch = new System.Windows.Forms.TextBox();
-            this.sorted_by = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ll_search_by = new System.Windows.Forms.Label();
+            this.ll_what_searching = new System.Windows.Forms.Label();
+            this.pb_photo = new System.Windows.Forms.PictureBox();
+            this.save_dialog = new System.Windows.Forms.SaveFileDialog();
             this.Main_Menu = new System.Windows.Forms.MenuStrip();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.open_dialog = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.Main_Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_photo)).BeginInit();
             this.Main_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Main_Grid
             // 
-            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Main_Grid.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Main_Grid.AllowUserToAddRows = false;
+            this.Main_Grid.AllowUserToDeleteRows = false;
+            this.Main_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Main_Grid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Papyrus", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Main_Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Main_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Main_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Change});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 229);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.VirtualMode = true;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.Main_Grid.Location = new System.Drawing.Point(13, 134);
+            this.Main_Grid.Name = "Main_Grid";
+            this.Main_Grid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Main_Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Main_Grid.RowHeadersVisible = false;
+            this.Main_Grid.RowHeadersWidth = 45;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Snap ITC", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Grid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.Main_Grid.RowTemplate.DividerHeight = 1;
+            this.Main_Grid.RowTemplate.Height = 32;
+            this.Main_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Main_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Main_Grid.Size = new System.Drawing.Size(627, 402);
+            this.Main_Grid.TabIndex = 0;
+            this.Main_Grid.VirtualMode = true;
+            this.Main_Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Change
             // 
@@ -82,38 +106,42 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(635, 274);
+            this.Add.BackColor = System.Drawing.SystemColors.Control;
+            this.Add.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Add.Location = new System.Drawing.Point(686, 171);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(95, 39);
+            this.Add.Size = new System.Drawing.Size(118, 57);
             this.Add.TabIndex = 1;
             this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // richTextBox1
+            // rtb_Description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(747, 226);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(140, 108);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtb_Description.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtb_Description.Location = new System.Drawing.Point(859, 360);
+            this.rtb_Description.Name = "rtb_Description";
+            this.rtb_Description.ReadOnly = true;
+            this.rtb_Description.Size = new System.Drawing.Size(306, 171);
+            this.rtb_Description.TabIndex = 2;
+            this.rtb_Description.Text = "";
             // 
-            // label1
+            // ll_Description
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(744, 205);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Description:";
+            this.ll_Description.AutoSize = true;
+            this.ll_Description.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ll_Description.Location = new System.Drawing.Point(855, 337);
+            this.ll_Description.Name = "ll_Description";
+            this.ll_Description.Size = new System.Drawing.Size(88, 20);
+            this.ll_Description.TabIndex = 3;
+            this.ll_Description.Text = "Description:";
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(635, 163);
+            this.Delete.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete.Location = new System.Drawing.Point(686, 280);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(95, 39);
+            this.Delete.Size = new System.Drawing.Size(118, 58);
             this.Delete.TabIndex = 4;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
@@ -123,53 +151,56 @@
             // 
             this.comboBoxChoise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChoise.FormattingEnabled = true;
-            this.comboBoxChoise.Location = new System.Drawing.Point(12, 63);
+            this.comboBoxChoise.Location = new System.Drawing.Point(13, 89);
             this.comboBoxChoise.Name = "comboBoxChoise";
-            this.comboBoxChoise.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxChoise.Size = new System.Drawing.Size(148, 21);
             this.comboBoxChoise.TabIndex = 6;
             this.comboBoxChoise.SelectedIndexChanged += new System.EventHandler(this.Tbsearch_TextChanged);
             // 
             // Tbsearch
             // 
-            this.Tbsearch.Location = new System.Drawing.Point(190, 63);
+            this.Tbsearch.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbsearch.Location = new System.Drawing.Point(230, 90);
             this.Tbsearch.Name = "Tbsearch";
-            this.Tbsearch.Size = new System.Drawing.Size(149, 20);
+            this.Tbsearch.Size = new System.Drawing.Size(228, 24);
             this.Tbsearch.TabIndex = 7;
             this.Tbsearch.TextChanged += new System.EventHandler(this.Tbsearch_TextChanged);
             // 
-            // sorted_by
+            // ll_search_by
             // 
-            this.sorted_by.AutoSize = true;
-            this.sorted_by.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.sorted_by.Location = new System.Drawing.Point(9, 42);
-            this.sorted_by.Name = "sorted_by";
-            this.sorted_by.Size = new System.Drawing.Size(78, 18);
-            this.sorted_by.TabIndex = 8;
-            this.sorted_by.Text = "Search by:";
+            this.ll_search_by.AutoSize = true;
+            this.ll_search_by.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ll_search_by.Location = new System.Drawing.Point(12, 68);
+            this.ll_search_by.Name = "ll_search_by";
+            this.ll_search_by.Size = new System.Drawing.Size(76, 20);
+            this.ll_search_by.TabIndex = 8;
+            this.ll_search_by.Text = "Search by:";
             // 
-            // label2
+            // ll_what_searching
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(187, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 18);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "What searching:";
+            this.ll_what_searching.AutoSize = true;
+            this.ll_what_searching.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ll_what_searching.Location = new System.Drawing.Point(227, 69);
+            this.ll_what_searching.Name = "ll_what_searching";
+            this.ll_what_searching.Size = new System.Drawing.Size(115, 20);
+            this.ll_what_searching.TabIndex = 9;
+            this.ll_what_searching.Text = "What searching:";
             // 
-            // pictureBox1
+            // pb_photo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(747, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pb_photo.BackColor = System.Drawing.SystemColors.Window;
+            this.pb_photo.Location = new System.Drawing.Point(859, 30);
+            this.pb_photo.Name = "pb_photo";
+            this.pb_photo.Size = new System.Drawing.Size(255, 274);
+            this.pb_photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_photo.TabIndex = 10;
+            this.pb_photo.TabStop = false;
+            this.pb_photo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
-            // openFileDialog1
+            // save_dialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.save_dialog.FileName = "catalog";
+            this.save_dialog.Filter = "Файлы DAT (*.dat) | *.dat";
             // 
             // Main_Menu
             // 
@@ -178,46 +209,53 @@
             this.сохранитьToolStripMenuItem});
             this.Main_Menu.Location = new System.Drawing.Point(0, 0);
             this.Main_Menu.Name = "Main_Menu";
-            this.Main_Menu.Size = new System.Drawing.Size(911, 24);
+            this.Main_Menu.Size = new System.Drawing.Size(1237, 27);
             this.Main_Menu.TabIndex = 12;
             this.Main_Menu.Text = "Main_Menu";
             // 
             // открытьToolStripMenuItem
             // 
+            this.открытьToolStripMenuItem.Font = new System.Drawing.Font("Stencil", 12F);
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
+            this.открытьToolStripMenuItem.Text = "Open";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
+            this.сохранитьToolStripMenuItem.Font = new System.Drawing.Font("Stencil", 12F);
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
+            this.сохранитьToolStripMenuItem.Text = "Save";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            // 
+            // open_dialog
+            // 
+            this.open_dialog.FileName = "cataloger";
+            this.open_dialog.Filter = "Файлы DAT (*.dat) | *.dat";
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 361);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.sorted_by);
+            this.ClientSize = new System.Drawing.Size(1237, 569);
+            this.Controls.Add(this.pb_photo);
+            this.Controls.Add(this.ll_what_searching);
+            this.Controls.Add(this.ll_search_by);
             this.Controls.Add(this.Tbsearch);
             this.Controls.Add(this.comboBoxChoise);
             this.Controls.Add(this.Delete);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ll_Description);
+            this.Controls.Add(this.rtb_Description);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Main_Grid);
             this.Controls.Add(this.Main_Menu);
             this.Name = "Main_Form";
             this.Text = "Cataloger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_Form_FormClosing);
             this.Load += new System.EventHandler(this.Main_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Main_Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_photo)).EndInit();
             this.Main_Menu.ResumeLayout(false);
             this.Main_Menu.PerformLayout();
             this.ResumeLayout(false);
@@ -227,22 +265,22 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Main_Grid;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox rtb_Description;
+        private System.Windows.Forms.Label ll_Description;
         private System.Windows.Forms.DataGridViewButtonColumn Change;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.ComboBox comboBoxChoise;
         private System.Windows.Forms.TextBox Tbsearch;
-        private System.Windows.Forms.Label sorted_by;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label ll_search_by;
+        private System.Windows.Forms.Label ll_what_searching;
+        private System.Windows.Forms.PictureBox pb_photo;
+        private System.Windows.Forms.SaveFileDialog save_dialog;
         private System.Windows.Forms.MenuStrip Main_Menu;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog open_dialog;
     }
 }
 

@@ -5,14 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace Course_Work
 {
+    [Serializable]
     public class SortableBindingList<T> : BindingList<T> where T : class
     {
         private bool _isSorted;
         
         private ListSortDirection _sortDirection = ListSortDirection.Ascending;
+        [NonSerialized]
         private PropertyDescriptor _sortProperty;
 
         public SortableBindingList()

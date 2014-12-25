@@ -21,20 +21,21 @@ namespace Course_Work
         }
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+
+            if (open_dialog.ShowDialog() == DialogResult.OK)
             {
-                Program.film.catalog = functions_of_cataloger.open(openFileDialog1);
+                Program.film.catalog = functions_of_cataloger.open(open_dialog);
                 
-                dataGridView1.DataSource = Program.film.catalog;
+                Main_Grid.DataSource = Program.film.catalog;
                 
             }
         }
         private void Main_Form_Load(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = Program.film.catalog;
+            Main_Grid.AutoGenerateColumns = true;
+            Main_Grid.DataSource = Program.film.catalog;
             List<string> list_for_comboBox = new List<string>();
-            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            foreach (DataGridViewColumn col in Main_Grid.Columns)
             {
                 if (col.HeaderText != "Change")
                     list_for_comboBox.Add(col.HeaderText);
@@ -43,65 +44,59 @@ namespace Course_Work
         }
         private void Add_Click(object sender, EventArgs e)
         {
-            Change_Form add = new Change_Form();
+            Add_Change_Form add = new Add_Change_Form();
             add.ShowDialog();
-            if (add.film != null)
-            Program.film.catalog.Add(add.film);
+            functions_of_cataloger.Add(Program.film.catalog, add.film);
+            return;
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
             {
-                richTextBox1.Text = Program.film.catalog[e.RowIndex].description;
-                pictureBox1.Image = Program.film.catalog[e.RowIndex].Photo;
+                rtb_Description.Text = Program.film.catalog[e.RowIndex].Description;
+                pb_photo.Image = Program.film.catalog[e.RowIndex].Photo;
             }
             if (e.ColumnIndex == 0 && e.RowIndex > -1)
             {
-                Change_Form change = new Change_Form(Program.film.catalog[e.RowIndex]);
+                Add_Change_Form change = new Add_Change_Form(Program.film.catalog[e.RowIndex]);
                 change.ShowDialog();
-                if (change.film != null)
-                {
-                    Program.film.catalog[e.RowIndex] = change.film;
-                }
+                functions_of_cataloger.Change(Program.film.catalog, change.film, e.RowIndex);
                 return;
             }
         }
         private void Delete_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
-            foreach (DataGridViewRow obj in dataGridView1.SelectedRows)
-            {
-                Program.film.catalog.RemoveAt(obj.Index);
-            }
+            pb_photo.Image = null;
+            rtb_Description.Text = null;
+            functions_of_cataloger.Delete(Main_Grid, Program.film.catalog);
             
         }
         private void Tbsearch_TextChanged(object sender, EventArgs e)
         {
-            functions_of_cataloger.search(dataGridView1, comboBoxChoise, Tbsearch);
+            functions_of_cataloger.search(Main_Grid, comboBoxChoise, Tbsearch);
         }
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
                 var result = MessageBox.Show("Save?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (this.saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    if (this.save_dialog.ShowDialog() == DialogResult.OK)
                     {
-                        functions_of_cataloger.save(saveFileDialog1, Program.film.catalog);
+                        functions_of_cataloger.save(save_dialog, Program.film.catalog);
                     }
                 }
             
         }
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             
-            if (this.saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (this.save_dialog.ShowDialog() == DialogResult.OK)
             {
-                functions_of_cataloger.save(saveFileDialog1, Program.film.catalog);
+                functions_of_cataloger.save(save_dialog, Program.film.catalog);
             }
         }
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            new photo(pictureBox1.Image).ShowDialog();
+            new photo(pb_photo.Image).ShowDialog();
         }
     }
 }

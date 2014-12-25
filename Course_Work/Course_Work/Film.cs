@@ -5,29 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using System.Drawing;
-using System.Xml.Serialization;
 namespace Course_Work
 {
+    [Serializable]
     public class Film
     {
-        public string title { get; set; }
-        public int year { get; set; }
-        public string genre { get; set; }
-        public string producer { get; set; }
-        public int time { get; set; }
-        public string description;
-        [XmlIgnore]
+        public string Title { get; set; }
+        public int Year { get; set; }
+        public string Genre { get; set; }
+        public string Producer { get; set; }
+        public int Time { get; set; }
+        public string Description;
+        public string Format { get; set; }
         public Image Photo;
         Film() { }
-        public Film(string Title, int Year, string Genre, string Producer, string Description, int Time, Image photo)
+        public Film(string title, int year, string genre, string producer, string description, int time, Image photo, string format)
         {
-            title = Title;
-            year = Year;
-            producer = Producer;
-            genre = Genre;
-            description = Description;
-            time = Time;
+            Title = title;
+            Year = year;
+            Producer = producer;
+            Genre = genre;
+            Description = description;
+            Time = time;
             this.Photo = photo;
+            Format = format;
         }        
     }
 }
