@@ -15,6 +15,7 @@ namespace Course_Work
         {
             InitializeComponent();
             this.Text = "Change";
+            tb_path_of_image.Text = "Path...";
             tb_Text.Text = obj.Title.ToString();
             tb_Year.Text = obj.Year.ToString();
             tb_Time.Text = obj.Time.ToString();
@@ -55,7 +56,7 @@ namespace Course_Work
                         throw new Exception();
                     }
                 }
-                film = Program.film.add(tb_Text.Text, Convert.ToInt16(tb_Year.Text), cb_Genre.Text, tb_Producer.Text, rtb_Description.Text, Convert.ToInt32(tb_Time.Text), Image.FromFile(tb_path_of_image.Text), cb_Format.Text);
+                film = Program.film.add(tb_Text.Text, Convert.ToInt16(tb_Year.Text), cb_Genre.Text, tb_Producer.Text, rtb_Description.Text, Convert.ToInt32(tb_Time.Text), pb_Image.Image, cb_Format.Text);
                 
             }
             catch (Exception ex)

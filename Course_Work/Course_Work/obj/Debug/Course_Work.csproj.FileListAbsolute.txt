@@ -15,7 +15,6 @@ C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Cour
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.pdb
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.csprojResolveAssemblyReference.cache
-C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Change_Form.resources
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Main_Form.resources
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.photo.resources
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Properties.Resources.resources
@@ -31,3 +30,4 @@ C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Wor
 C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe
 C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.pdb
 C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Add_Change_Form.resources
+C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Add_Change_Form.resources

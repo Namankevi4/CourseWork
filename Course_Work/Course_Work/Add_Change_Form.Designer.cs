@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Change_Form));
             this.tb_Text = new System.Windows.Forms.TextBox();
             this.tb_Year = new System.Windows.Forms.TextBox();
             this.tb_Producer = new System.Windows.Forms.TextBox();
@@ -192,6 +193,7 @@
             // 
             this.tb_path_of_image.Location = new System.Drawing.Point(588, 318);
             this.tb_path_of_image.Name = "tb_path_of_image";
+            this.tb_path_of_image.ReadOnly = true;
             this.tb_path_of_image.Size = new System.Drawing.Size(141, 20);
             this.tb_path_of_image.TabIndex = 15;
             // 
@@ -251,6 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(947, 395);
             this.Controls.Add(this.ll_Format);
             this.Controls.Add(this.cb_Format);
