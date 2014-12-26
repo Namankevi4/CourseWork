@@ -21,15 +21,10 @@ namespace Course_Work
         }
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (open_dialog.ShowDialog() == DialogResult.OK)
-            {
-                Program.film.catalog = functions_of_cataloger.open(open_dialog);
-                
-                Main_Grid.DataSource = Program.film.catalog;
-                
-            }
+           Program.film.open();
+           Main_Grid.DataSource = Program.film.catalog;
         }
+                
         private void Main_Form_Load(object sender, EventArgs e)
         {
             Main_Grid.AutoGenerateColumns = true;
@@ -54,8 +49,8 @@ namespace Course_Work
         {
             if (e.RowIndex > -1)
             {
-                rtb_Description.Text = Program.film.catalog[e.RowIndex].Description;
-                pb_photo.Image = Program.film.catalog[e.RowIndex].Photo;
+                rtb_Description.Text = Program.film.index(e.RowIndex).Description;
+                pb_photo.Image = Program.film.index(e.RowIndex).Photo;
             }
             if (e.ColumnIndex == 0 && e.RowIndex > -1)
             {
@@ -85,19 +80,14 @@ namespace Course_Work
                 var result = MessageBox.Show("Save?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (this.save_dialog.ShowDialog() == DialogResult.OK)
-                    {
-                        functions_of_cataloger.save(save_dialog, Program.film.catalog);
-                    }
+                    Program.film.save();
                 }
             
         }
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.save_dialog.ShowDialog() == DialogResult.OK)
-            {
-                functions_of_cataloger.save(save_dialog, Program.film.catalog);
-            }
+          Program.film.save();
+            
         }
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
