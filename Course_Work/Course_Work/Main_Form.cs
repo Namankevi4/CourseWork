@@ -46,7 +46,8 @@ namespace Course_Work
         {
             Add_Change_Form add = new Add_Change_Form();
             add.ShowDialog();
-            functions_of_cataloger.Add(Program.film.catalog, add.film);
+            Program.film.add(add.film);
+            
             return;
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,9 +59,9 @@ namespace Course_Work
             }
             if (e.ColumnIndex == 0 && e.RowIndex > -1)
             {
-                Add_Change_Form change = new Add_Change_Form(Program.film.catalog[e.RowIndex]);
+                Add_Change_Form change = new Add_Change_Form(Program.film.index(e.RowIndex));
                 change.ShowDialog();
-                functions_of_cataloger.Change(Program.film.catalog, change.film, e.RowIndex);
+                Program.film.change(change.film, e.RowIndex);
                 return;
             }
         }
@@ -68,7 +69,11 @@ namespace Course_Work
         {
             pb_photo.Image = null;
             rtb_Description.Text = null;
-            functions_of_cataloger.Delete(Main_Grid, Program.film.catalog);
+
+            foreach (DataGridViewRow row in Main_Grid.SelectedRows)
+            {
+                Program.film.delete(row.Index);
+            }
             
         }
         private void Tbsearch_TextChanged(object sender, EventArgs e)

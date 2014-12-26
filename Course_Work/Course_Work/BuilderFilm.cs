@@ -10,10 +10,21 @@ namespace Course_Work
     class BuilderFilm
     {
         public SortableBindingList<Film> catalog = new SortableBindingList<Film>();
-        public Film add(string title, int year, string genre, string producer, string description, int time, Image photo, string format)
+        public void add(Film f)
         {
-            Film f = new Film(title, year, genre, producer, description, time, photo, format);
-            return f;
+            catalog.Add(f);
+        }
+        public void change(Film f, int index)
+        {
+            catalog[index] = f;
+        }
+        public Film index(int index)
+        {
+            return catalog[index];
+        }
+        public void delete(int index)
+        {
+            catalog.RemoveAt(index);
         }
     } 
 }

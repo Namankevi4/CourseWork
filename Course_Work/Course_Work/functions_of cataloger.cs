@@ -49,24 +49,6 @@ namespace Course_Work
             stream.Close();
             return f;
         }
-        static public void Add(SortableBindingList<Film> l, Film f)
-        {
-            if (f != null)
-            l.Add(f);
-        }
-        static public void Change(SortableBindingList<Film> l, Film f, int i)
-        {
-            if (f != null)
-            {
-                Program.film.catalog[i] = f;
-            }
-        }
-        public static void Delete(DataGridView dgv, SortableBindingList<Film> l)
-        {
-            foreach (DataGridViewRow obj in dgv.SelectedRows)
-            {
-                l.RemoveAt(obj.Index);
-            }
-        }
-    }
+        
+      }
 }

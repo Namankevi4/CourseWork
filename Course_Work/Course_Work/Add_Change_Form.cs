@@ -11,6 +11,7 @@ namespace Course_Work
 {
     public partial class  Add_Change_Form : Form
     {
+        public Film film;
         public Add_Change_Form(Film obj)
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace Course_Work
             pb_Image.Image = obj.Photo;
             
         }
-        public Film film;
         public Add_Change_Form()
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace Course_Work
                         throw new Exception();
                     }
                 }
-                film = Program.film.add(tb_Text.Text, Convert.ToInt16(tb_Year.Text), cb_Genre.Text, tb_Producer.Text, rtb_Description.Text, Convert.ToInt32(tb_Time.Text), pb_Image.Image, cb_Format.Text);
+                 film = new Film(tb_Text.Text, Convert.ToInt16(tb_Year.Text), cb_Genre.Text, tb_Producer.Text, rtb_Description.Text, Convert.ToInt32(tb_Time.Text), pb_Image.Image, cb_Format.Text);
                 
             }
             catch (Exception ex)
