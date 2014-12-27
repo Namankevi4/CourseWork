@@ -31,3 +31,14 @@ C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Wor
 C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.pdb
 C:\Users\Sanchez\Desktop\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Add_Change_Form.resources
 C:\Users\alex\Documents\GitHub\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Add_Change_Form.resources
+F:\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe.config
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.exe
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.pdb
+F:\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.exe
+F:\CourseWork\Course_Work\Course_Work\bin\Debug\Course_Work.pdb
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.csprojResolveAssemblyReference.cache
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Add_Change_Form.resources
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Main_Form.resources
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.photo.resources
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.Properties.Resources.resources
+F:\CourseWork\Course_Work\Course_Work\obj\Debug\Course_Work.csproj.GenerateResource.Cache

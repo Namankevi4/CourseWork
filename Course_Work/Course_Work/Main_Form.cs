@@ -93,5 +93,10 @@ namespace Course_Work
         {
             new photo(pb_photo.Image).ShowDialog();
         }
+
+        private void b_delete_all_Click(object sender, EventArgs e)
+        {
+            Program.film.catalog.Clear();
+        }
     }
 }

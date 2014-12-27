@@ -87,7 +87,7 @@
             // 
             this.rtb_Description.Location = new System.Drawing.Point(299, 75);
             this.rtb_Description.Name = "rtb_Description";
-            this.rtb_Description.Size = new System.Drawing.Size(245, 154);
+            this.rtb_Description.Size = new System.Drawing.Size(250, 165);
             this.rtb_Description.TabIndex = 5;
             this.rtb_Description.Text = "";
             // 
@@ -215,9 +215,10 @@
             // pb_Image
             // 
             this.pb_Image.BackColor = System.Drawing.SystemColors.Window;
-            this.pb_Image.Location = new System.Drawing.Point(664, 34);
+            this.pb_Image.Image = ((System.Drawing.Image)(resources.GetObject("pb_Image.Image")));
+            this.pb_Image.Location = new System.Drawing.Point(647, 12);
             this.pb_Image.Name = "pb_Image";
-            this.pb_Image.Size = new System.Drawing.Size(221, 229);
+            this.pb_Image.Size = new System.Drawing.Size(207, 251);
             this.pb_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Image.TabIndex = 17;
             this.pb_Image.TabStop = false;

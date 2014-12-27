@@ -17,10 +17,12 @@ namespace Course_Work
         public SortableBindingList<Film> catalog = new SortableBindingList<Film>();
         public void add(Film f)
         {
+            if (f!=null)
             catalog.Add(f);
         }
         public void change(Film f, int index)
         {
+            if(f!=null)
             catalog[index] = f;
         }
         public Film index(int index)

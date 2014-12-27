@@ -25,30 +25,5 @@ namespace Course_Work
                 else dgv.Rows[i].Visible = false;
             }
         }
-        static public void save(SaveFileDialog svd, SortableBindingList<Film> f)
-        {
-            FileStream stream = new FileStream(svd.FileName, FileMode.Create);
-            BinaryFormatter serializer = new BinaryFormatter();
-            try
-            {
-                serializer.Serialize(stream, f);
-            }
-            catch { MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            stream.Close();
-        }
-        static public SortableBindingList<Film> open(OpenFileDialog svd)
-        {
-            SortableBindingList<Film> f = new SortableBindingList<Film>();
-            FileStream stream = new FileStream(svd.FileName, FileMode.Open);
-            BinaryFormatter serializer = new BinaryFormatter();
-            try
-            {
-                f = serializer.Deserialize(stream) as SortableBindingList<Film>;
-            }
-            catch { MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            stream.Close();
-            return f;
-        }
-        
-      }
+    }
 }

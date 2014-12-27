@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Main_Grid = new System.Windows.Forms.DataGridView();
             this.Change = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -48,6 +48,7 @@
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.open_dialog = new System.Windows.Forms.OpenFileDialog();
+            this.b_delete_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Main_Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_photo)).BeginInit();
             this.Main_Menu.SuspendLayout();
@@ -58,39 +59,40 @@
             this.Main_Grid.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Main_Grid.AllowUserToAddRows = false;
             this.Main_Grid.AllowUserToDeleteRows = false;
-            this.Main_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Main_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Main_Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Main_Grid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Papyrus", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Main_Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Papyrus", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Main_Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Main_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Main_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Change});
-            this.Main_Grid.Location = new System.Drawing.Point(13, 134);
+            this.Main_Grid.Location = new System.Drawing.Point(12, 134);
             this.Main_Grid.Name = "Main_Grid";
             this.Main_Grid.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Main_Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Main_Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Main_Grid.RowHeadersVisible = false;
             this.Main_Grid.RowHeadersWidth = 45;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Snap ITC", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Main_Grid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.Main_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Snap ITC", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Grid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Main_Grid.RowTemplate.DividerHeight = 1;
             this.Main_Grid.RowTemplate.Height = 32;
-            this.Main_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Main_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Main_Grid.Size = new System.Drawing.Size(627, 402);
+            this.Main_Grid.Size = new System.Drawing.Size(777, 423);
             this.Main_Grid.TabIndex = 0;
             this.Main_Grid.VirtualMode = true;
             this.Main_Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -109,7 +111,7 @@
             // 
             this.Add.BackColor = System.Drawing.SystemColors.Control;
             this.Add.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Add.Location = new System.Drawing.Point(686, 171);
+            this.Add.Location = new System.Drawing.Point(795, 188);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(118, 57);
             this.Add.TabIndex = 1;
@@ -120,7 +122,7 @@
             // rtb_Description
             // 
             this.rtb_Description.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtb_Description.Location = new System.Drawing.Point(859, 360);
+            this.rtb_Description.Location = new System.Drawing.Point(919, 360);
             this.rtb_Description.Name = "rtb_Description";
             this.rtb_Description.ReadOnly = true;
             this.rtb_Description.Size = new System.Drawing.Size(306, 171);
@@ -131,7 +133,7 @@
             // 
             this.ll_Description.AutoSize = true;
             this.ll_Description.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ll_Description.Location = new System.Drawing.Point(855, 337);
+            this.ll_Description.Location = new System.Drawing.Point(915, 337);
             this.ll_Description.Name = "ll_Description";
             this.ll_Description.Size = new System.Drawing.Size(88, 20);
             this.ll_Description.TabIndex = 3;
@@ -140,7 +142,7 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete.Location = new System.Drawing.Point(686, 280);
+            this.Delete.Location = new System.Drawing.Point(795, 276);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(118, 58);
             this.Delete.TabIndex = 4;
@@ -190,9 +192,10 @@
             // pb_photo
             // 
             this.pb_photo.BackColor = System.Drawing.SystemColors.Window;
-            this.pb_photo.Location = new System.Drawing.Point(859, 30);
+            this.pb_photo.Image = ((System.Drawing.Image)(resources.GetObject("pb_photo.Image")));
+            this.pb_photo.Location = new System.Drawing.Point(963, 30);
             this.pb_photo.Name = "pb_photo";
-            this.pb_photo.Size = new System.Drawing.Size(255, 274);
+            this.pb_photo.Size = new System.Drawing.Size(228, 274);
             this.pb_photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_photo.TabIndex = 10;
             this.pb_photo.TabStop = false;
@@ -235,12 +238,24 @@
             this.open_dialog.FileName = "cataloger";
             this.open_dialog.Filter = "Файлы DAT (*.dat) | *.dat";
             // 
+            // b_delete_all
+            // 
+            this.b_delete_all.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_delete_all.Location = new System.Drawing.Point(795, 360);
+            this.b_delete_all.Name = "b_delete_all";
+            this.b_delete_all.Size = new System.Drawing.Size(118, 58);
+            this.b_delete_all.TabIndex = 13;
+            this.b_delete_all.Text = "Delete all";
+            this.b_delete_all.UseVisualStyleBackColor = true;
+            this.b_delete_all.Click += new System.EventHandler(this.b_delete_all_Click);
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1237, 569);
+            this.Controls.Add(this.b_delete_all);
             this.Controls.Add(this.pb_photo);
             this.Controls.Add(this.ll_what_searching);
             this.Controls.Add(this.ll_search_by);
@@ -283,6 +298,7 @@
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog open_dialog;
+        private System.Windows.Forms.Button b_delete_all;
     }
 }
 
